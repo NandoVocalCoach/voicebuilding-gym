@@ -1,0 +1,48 @@
+/* The Voicebuilding Gym: the product page and its three plain pages (terms, refunds, privacy).
+   Same colors and fonts as the rest of the site: bg #0d0d0d, card #1a1a1a, orange #FF5500, Bebas Neue + Montserrat. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: #0d0d0d; color: #e9e9e9; font-family: 'Montserrat', system-ui, sans-serif; line-height: 1.65; }
+a { color: #FF5500; }
+a:focus-visible, button:focus-visible { outline: 2px solid #FF5500; outline-offset: 3px; }
+
+/* one language at a time; English shows when scripts are off */
+[data-lang="en"] .es, [data-lang="es"] .en { display: none !important; }
+
+.gp-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 760px; margin: 0 auto; padding: 18px 16px 0; }
+.gp-brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 1.5px; color: #fff; text-decoration: none; line-height: 1.1; }
+.gp-brand small { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.68rem; letter-spacing: 0; color: #9a9a9a; font-weight: 500; }
+.gp-lang { display: flex; border: 1px solid #333; border-radius: 999px; overflow: hidden; flex: none; }
+.gp-lang button { background: none; border: 0; color: #9a9a9a; font: 700 0.75rem 'Montserrat', sans-serif; padding: 8px 12px; min-height: 36px; cursor: pointer; }
+[data-lang="en"] .gp-lang [data-set="en"], [data-lang="es"] .gp-lang [data-set="es"] { background: #FF5500; color: #0d0d0d; }
+
+main { max-width: 760px; margin: 0 auto; padding: 28px 16px 40px; }
+h1 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(2.3rem, 9vw, 3.4rem); letter-spacing: 2px; line-height: 1; color: #fff; text-wrap: balance; }
+.gp-sub { margin-top: 12px; font-size: 1.05rem; color: #c9c9c9; max-width: 60ch; }
+.gp-date { margin-top: 10px; font-size: 0.82rem; color: #8a8a8a; }
+h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.55rem; letter-spacing: 1.2px; color: #FF5500; margin: 34px 0 8px; }
+p, li { font-size: 0.98rem; max-width: 68ch; }
+p + p { margin-top: 10px; }
+ul { margin: 8px 0 0 1.15rem; }
+li + li { margin-top: 6px; }
+strong { color: #fff; }
+
+.gp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.gp-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 14px; padding: 18px 16px; }
+.gp-card.pro { border-color: #FF5500; }
+.gp-card h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.5rem; letter-spacing: 1.5px; color: #fff; }
+.gp-price { font-size: 1.05rem; font-weight: 700; color: #fff; margin: 4px 0 8px; font-variant-numeric: tabular-nums; }
+.gp-price small { font-weight: 500; color: #9a9a9a; font-size: 0.8rem; }
+.gp-card ul { margin-top: 0; }
+.gp-note { margin-top: 12px; font-size: 0.86rem; color: #a5a5a5; }
+
+.gp-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.gp-btn { display: inline-block; background: #FF5500; color: #0d0d0d; font-weight: 700; font-size: 0.92rem; letter-spacing: 0.4px; text-decoration: none; padding: 14px 20px; border-radius: 10px; }
+.gp-btn.ghost { background: none; color: #fff; border: 1px solid #444; }
+
+footer { border-top: 1px solid #222; margin-top: 10px; }
+.gp-foot { max-width: 760px; margin: 0 auto; padding: 20px 16px 34px; font-size: 0.85rem; color: #8a8a8a; }
+.gp-foot nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 10px; }
+.gp-foot a { color: #c9c9c9; }
+
+@media (max-width: 560px) { .gp-cards { grid-template-columns: 1fr; } }
